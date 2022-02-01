@@ -5,6 +5,7 @@
 
 # 1. write code to display each contact (you can reuse the previous lab's code) and include the contact's company name, e.g.:
 
+
 # ---------------------------------
 # Contacts: 4
 # Andy Jassy - andy@amazon.com - Amazon.com, Inc.
