@@ -38,8 +38,11 @@ sug = Contact.new(values)
 sug.save
 puts "Contacts: #{Contact.all.count}"
 
-puts "#{gus.first_name.inspect} - #{gus.email.inspect}"
-puts "#{sug.first_name.inspect} - #{sug.email.inspect}"
+all_contacts = Contact.all
+
+for contact in all_contacts
+    puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
+end
 
 
 # 3. write code to display how many contacts are in the database AND each contact's info (name, email), e.g.:
