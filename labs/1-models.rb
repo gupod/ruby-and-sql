@@ -8,10 +8,39 @@
 Contact.destroy_all
 # **************************
 
+apple = Company.where({name:"Apple Inc."})[0]
+apple_id=apple.id
+
+amzn = Company.where({name:"Amazon Inc."})[0]
+amzn_id=amzn.id
+
 # 1a. check out the schema file
 # 1b. check out the model file
 
 # 2. create 1-2 new contacts for each company (they can be made up)
+
+values ={first_name: "Gus", 
+    last_name: "Pires", 
+    email: "gp@od.com", 
+    phone_number: "111-111-1111",
+    company_id: apple_id}
+
+gus = Contact.new(values)
+gus.save
+
+values ={first_name: "Sug", 
+    last_name: "Serip", 
+    email: "od@gp.com", 
+    phone_number: "111-111-1111",
+    company_id: amzn_id}
+
+sug = Contact.new(values)
+sug.save
+puts "Contacts: #{Contact.all.count}"
+
+puts "#{gus.first_name.inspect} - #{gus.email.inspect}"
+puts "#{sug.first_name.inspect} - #{sug.email.inspect}"
+
 
 # 3. write code to display how many contacts are in the database AND each contact's info (name, email), e.g.:
 
